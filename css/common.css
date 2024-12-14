@@ -1,0 +1,349 @@
+/* Tüm öğeler için kutu modelini sınır kutusu olarak ayarlar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Body stilleri */
+body {
+  margin: 16px; /* Kenar boşlukları */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Font ailesi */
+  -webkit-font-smoothing: antialiased; /* Font yumuşatma */
+  -moz-osx-font-smoothing: grayscale; /* Mac OS font yumuşatma */
+  background-color: #fafafa; /* Arka plan rengi */
+  color: #212121; /* Metin rengi */
+  line-height: 1.5; /* Satır yüksekliği */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f6f6f6;
+}
+
+/* Liste stilleri */
+ul {
+  list-style: none; /* Liste işaretlerini kaldırır */
+}
+
+.title {
+  list-style: none;
+  font-size: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  text-transform: capitalize;
+
+}
+
+.box {
+  width: 300px;
+  border-bottom: 20px solid #03a9f4;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.box h2 {
+  color: #fff;
+  background:  linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%) ;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.box ul {
+  position: relative;
+  background: #fff;
+}
+.box ul:hover li {
+  opacity: 0.2;
+}
+.box ul li {
+  list-style: none;
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+.box ul li:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  background: #25bcff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  opacity: 1;
+}
+.box ul li span {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  background: #25bcff;
+  color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+.box ul li:hover span {
+  background: #fff;
+  color: #25bcff;
+}
+
+
+/* Geri dönüş butonu stilleri */
+.back-btn {
+  width: 300px;
+  font-size: 16px; /* Font boyutu */
+  color: #085b92; /* Metin rengi */
+  text-decoration: none; /* Metin alt çizgisini kaldırır */
+  display: inline-block; /* İçerik kutusu olarak görüntüler */
+  padding: 8px 16px; /* İç boşluklar */
+  border: 2px solid #213068; /* Çerçeve */
+  border-radius: 8px; /* Köşe yuvarlama */
+  transition: all 0.6s ease-in-out; /* Geçiş efekti */
+}
+
+
+.back-btn {background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)}
+.back-btn {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+   background-color: #6c8cff; /* Arka plan rengi */
+   color: #fff; /* Metin rengi */
+   border: #6c8cff; /* Çerçeve rengi */
+   outline: none; /* Kenar çizgisini kaldırır */
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+#categories li .item h2 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #2e2f42;
+  padding: 16px;
+}
+#categories li {
+  width: 500px;
+  height: auto;
+  padding: 7px;
+  gap: 16px;
+  border-radius: 12px;
+  opacity: 0px;
+  background: #f6f6fe;
+}
+#categories .item {
+  margin-bottom: 24px;
+}
+#categories .item ul {
+  padding-inline-start: 0;
+}
+.item ul li {
+  width: 360px;
+  height: 40px;
+  gap: 0px;
+  border-radius: 4px;
+  opacity: 0px;
+  border: 1px solid #808080;
+  margin: 8px;
+}
+
+/* Galeri stilleri */
+.gallery {
+  display: flex; /* Esnek kutu modeli */
+  flex-wrap: wrap; /* İçerikleri satır içine yerleştirir */
+  justify-content: space-between ;/* İçerikleri boşluklarla yerleştirir */
+  list-style: none;
+  padding: 0px;
+  gap: 16px; /* Öğeler arası boşluk */
+  max-width: 1200px; /* Maksimum genişlik */
+  width: 100%; /* Tam genişlik */
+  margin: 0 auto; /* Ortalar */
+}
+
+/* Galeri içindeki resim stilleri */
+.gallery img {
+  height: auto; /* Otomatik yükseklik */
+  border-radius: 8px; /* Köşe yuvarlama */
+  
+.box:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #45caff 0%, #ff1b6b 100% );
+  transform: translate3d(0px, 20px, 0) scale(0.95);
+  filter: blur(20px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.box::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+      
+  transition: transform 0.3s ease; /* Geçiş efekti */
+}
+
+/* Galeri resimlerinin hover durumu */
+.gallery img:hover {
+  transform: scale(1.05); /* Büyütme efekti */
+}
+
+
+.hw3 h1{
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #2e2f42;
+}
+
+/* Giriş alanı stilleri */
+.input {
+  padding: 8px; /* İç boşluklar */
+  font: inherit; /* Varsayılan font */
+  width: 360px; /* Genişlik */
+  height: 40px; /* Yükseklik */
+  background-color: transparent; /* Arka plan rengi */
+  border-radius: 4px; /* Köşe yuvarlama */
+  border: 1px solid #808080; /* Çerçeve */
+  box-shadow: none; /* Gölge yok */
+}
+
+/* Giriş formu stilleri */
+.login-form {
+  background-color: #fff; /* Arka plan rengi */
+  padding: 24px; /* İç boşluklar */
+  border-radius: 8px; /* Köşe yuvarlama */
+  box-shadow: none; /* Gölge yok */
+  width: 408px; /* Genişlik */
+  height: 256px; /* Yükseklik */
+}
+
+/* Giriş formu etiket stilleri */
+.login-form label {
+  display: flex; /* Esnek kutu modeli */
+  align-items: flex-start; /* Başlangıç hizalaması */
+  justify-content: flex-start; /* Başlangıç hizalaması */
+  flex-direction: column; /* Dikey hizalama */
+  gap: 8px; /* Öğeler arası boşluk */
+}
+
+/* Giriş formu içindeki input stilleri */
+.login-form input {
+  width: 100%; /* Tam genişlik */
+  padding: 10px; /* İç boşluklar */
+  margin-bottom: 16px; /* Alt boşluk */
+  border: 1px solid #ccc; /* Çerçeve */
+  border-radius: 4px; /* Köşe yuvarlama */
+  box-sizing: border-box; /* Kutu modeli */
+  font-size: 16px; /* Font boyutu */
+  color: #333; /* Metin rengi */
+}
+
+
+#controls {
+  width: 486px;
+  height: 104px;
+  padding: 32px ;
+  gap: 16px;
+  border-radius: 8px;
+  opacity: 0px;
+  background: #F6F6FE;
+  margin-bottom: 16px;
+}
+#controls input {
+  width: 170px;
+  height: 40px;
+  padding: 8px 72px 8px 72px;
+  gap: 10px;
+  border-radius: 8px;
+  opacity: 0px;
+  border: 1px solid #808080;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+#controls input::-webkit-outer-spin-button,
+#controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#controls .create,.destroy{
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  gap: 10px;
+  border-radius: 8px;
+  border-width: 0;
+  opacity: 0px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+#controls .create{
+  padding-left: 30px;
+  background: #4E75FF;
+}
+#controls .destroy{
+  padding-left: 30px;
+  background: #FF4E4E;
+}
+#boxes {
+  display: inline-flex;
+  background: #F6F6FE;
+}
